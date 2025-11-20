@@ -21,11 +21,11 @@ def _require_file(path:str, friendly_name: str):
 def load_input_data():
     #Verify files exist before reading
     _require_file("01_case_study_returns.csv", "Returns CSV")
-    _require_file("02_case_study_factor_Loadings.csv", "Factor Loadings CSV")
+    _require_file("02_case_study_factor_loadings.csv", "Factor Loadings CSV")
     _require_file("03_case_study_earnings_dates.csv", "Earnings Dates CSV")
     
     r = pd.read_csv("01_case_study_returns.csv", header=2)
-    l = pd.read_csv("02_case_study_factor_Loadings.csv", header=2)
+    l = pd.read_csv("02_case_study_factor_loadings.csv", header=2)
     raw_e = open("03_case_study_earnings_dates.csv", "r", encoding="utf-8").read().splitlines()
     #parse earnings dates rhobustly
     earn_dates = []
